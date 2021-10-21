@@ -11,10 +11,12 @@
     <packaging>war</packaging>
     <!-- Build Settings -->
     <build>
+        <pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
+                <version>3.8.3</version>
                 <configuration>
                     <webResources>
                         <resource>
@@ -25,5 +27,6 @@
                 </configuration>
             </plugin>
         </plugins>
+        </pluginManagement>
     </build>
 </project>
