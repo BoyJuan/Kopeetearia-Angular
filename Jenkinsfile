@@ -6,7 +6,7 @@ pipeline{
             steps {
                 bat "npm install"
                 bat "npm run build"
-                bat "mvn clean install"
+                bat "mvn clean package"
             }
 		}		
         stage('Deploy'){
