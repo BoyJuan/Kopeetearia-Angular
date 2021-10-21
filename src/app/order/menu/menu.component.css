@@ -1,0 +1,13 @@
+.container-fluid{
+    width: 80%;
+  }
+  
+  .container-fluid img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  #menu{
+    display: flex;
+    justify-content: flex-end;
+  }

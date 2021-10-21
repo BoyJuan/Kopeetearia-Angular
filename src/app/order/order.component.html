@@ -1,0 +1,13 @@
+
+<div class="alert {{alertType}}" *ngIf='message'>
+        {{ message }}
+        <button (click)="removeAlert()">&times;</button>
+</div>
+
+<div class="container-fluid" id="order">
+        <app-menu></app-menu>
+        <div id="right">
+            <app-add-order></app-add-order>
+            <app-order-list></app-order-list>
+        </div>
+</div>

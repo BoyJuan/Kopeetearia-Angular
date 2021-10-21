@@ -1,0 +1,33 @@
+<div class="container-fluid" id="ordertable">
+    <table class="table table-bordered" >
+        <thead>
+             <tr>
+                 <th>Order Item</th>
+                 <th>Price</th>
+                 <th>On 5% Promo?</th>
+                 <th>Action</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td align = "center">
+                    <input 
+                        type="text"
+                        [(ngModel)]="newOrder.orderName"></td>
+                 <td align = "center">
+                    <input 
+                        type="number"
+                        [(ngModel)]="newOrder.price"></td>
+                 <td style="text-align: center;">
+                     <input 
+                         type="checkbox"
+                         [(ngModel)]="newOrder.isDiscounted"></td>
+                 <td align = "center"><button
+                        type="button"
+                        (click)=placeOrder()>Place&nbsp;Order
+                     </button>
+                 </td>
+             </tr>
+         </tbody>
+     </table>
+</div>

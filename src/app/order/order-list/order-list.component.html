@@ -1,0 +1,58 @@
+<div class="container-fluid" id="ordertable">
+    <table class="table table-bordered">
+        <thead>
+            <td colspan="4" style="text-align: center;">Attending Clerk: TestUser</td>
+            <tr>
+                <th>Order Item</th>
+                <th>Price</th>
+                <th>On 5% Promo?</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orders">
+                <td>{{order.orderName}}</td>
+                <td align="end">${{order.price | number : '1.2-2'}}</td>
+                <td align="center">
+                    <input 
+                        type="checkbox" 
+                        [checked]="order.isDiscounted"
+                        disabled>
+                </td>
+                <td align = "center">
+                    <input type="button" value="Edit" (click)="onEdit(order)" style="margin-right: 10px;">
+                    <input type="button" value="Delete" (click)="onDelete(order)">
+                </td>
+            </tr>
+            <tr *ngIf="editMode">
+                <td>
+                   <input 
+                        type="text"
+                        [(ngModel)]="editOrder.orderName"></td>
+                <td align = "center">
+                   <input 
+                        type="number"
+                        [(ngModel)]="editOrder.price"
+                       ></td>
+                <td style="text-align: center;">
+                    <input 
+                        type="checkbox"
+                        [(ngModel)]="editOrder.isDiscounted" ></td>
+                <td align = "center">
+                    <input
+                        type="button"
+                        style="margin-right: 10px;"
+                        value="Update"
+                        (click)="onUpdate(editOrder)"
+                       >
+                    <input
+                        type="button"
+                        value="Cancel"
+                        (click)="onCancel()">
+                </td>
+            </tr>
+        </tbody>
+        <tr><td colspan="4" style="text-align: center;">Total Regular Bill: <strong>$ {{totalRegularBill | number : '1.2-2'}} </strong></td></tr>
+        <tr><td colspan="4" style="text-align: center;">Total Discounted Bill: <strong>$ {{totalDiscountedBill | number : '1.2-2'}}</strong> </td></tr>
+    </table>
+</div>

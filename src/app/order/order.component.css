@@ -1,0 +1,26 @@
+#order{
+    display: flex;
+    grid-template-columns: 800px auto;
+    flex-wrap: wrap;
+    padding-top: 1em;
+    justify-content: center;
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
+}
+
+.alert{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    color: dark darkgray;
+    border: transparent;
+    background-color: transparent;
+    text-align: right;
+}
+
+button:hover{
+    background-color: lightslategrey;
+}

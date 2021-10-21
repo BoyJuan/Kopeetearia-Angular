@@ -1,0 +1,5 @@
+<div class="alert {{incorrectUrlAlert}}" *ngIf="incorrectURL">
+    {{ incorrectURL }}
+    <button (click)="removeAlert()">&times;</button>
+</div>
+<h6><a [routerLink]="['/api']" >Back to Order Page</a></h6>

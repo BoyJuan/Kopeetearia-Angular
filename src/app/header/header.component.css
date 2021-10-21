@@ -1,0 +1,11 @@
+.container-fluid{
+  margin: 0px;
+  padding: 0px;
+}
+img{
+    width: 60%;
+}
+
+.navbar{
+    background-color: black;
+}
