@@ -12,17 +12,21 @@
              <tr>
                  <td align = "center">
                     <input 
+                        id="addOrderOrderName"
                         type="text"
                         [(ngModel)]="newOrder.orderName"></td>
                  <td align = "center">
                     <input 
+                        id="addOrderPrice"
                         type="number"
                         [(ngModel)]="newOrder.price"></td>
                  <td style="text-align: center;">
                      <input 
-                         type="checkbox"
-                         [(ngModel)]="newOrder.isDiscounted"></td>
+                        id="addOrderDiscounted"
+                        type="checkbox"
+                        [(ngModel)]="newOrder.isDiscounted"></td>
                  <td align = "center"><button
+                        id="addOrderButton"
                         type="button"
                         (click)=placeOrder()>Place&nbsp;Order
                      </button>

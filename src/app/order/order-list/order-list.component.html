@@ -20,26 +20,30 @@
                         disabled>
                 </td>
                 <td align = "center">
-                    <input type="button" value="Edit" (click)="onEdit(order)" style="margin-right: 10px;">
-                    <input type="button" value="Delete" (click)="onDelete(order)">
+                    <input id="editOrderButton" type="button" value="Edit" (click)="onEdit(order)" style="margin-right: 10px;">
+                    <input id="deleteOrderButton" type="button" value="Delete" (click)="onDelete(order)">
                 </td>
             </tr>
             <tr *ngIf="editMode">
                 <td>
                    <input 
+                        id="editOrderOrderName"
                         type="text"
                         [(ngModel)]="editOrder.orderName"></td>
                 <td align = "center">
                    <input 
+                        id="editOrderPrice"
                         type="number"
                         [(ngModel)]="editOrder.price"
                        ></td>
                 <td style="text-align: center;">
                     <input 
+                        id="editOrderDiscounted"
                         type="checkbox"
                         [(ngModel)]="editOrder.isDiscounted" ></td>
                 <td align = "center">
                     <input
+                        id="saveOrderButton"
                         type="button"
                         style="margin-right: 10px;"
                         value="Update"
