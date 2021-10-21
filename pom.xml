@@ -9,6 +9,9 @@
     <artifactId>Kopeetearia-Angular</artifactId>
     <version>1.0.0</version>
     <packaging>war</packaging>
+    <properties>
+    <failOnMissingWebXml>false</failOnMissingWebXml>   
+</properties>
     <!-- Build Settings -->
     <build>
         <plugins>
